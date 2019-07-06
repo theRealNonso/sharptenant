@@ -11,6 +11,7 @@ urlpatterns = [
     path('review', views.review, name='review'),
     path('register', views.register, name='register'),
     path('login', views.userlogin, name='login'),
+    path('about', views.about, name='about'),
     path('logout', views.userlogout, name='logout'),
     path('review-detail/<int:id>/', views.detailReview, name='detail'),
     # path('write-comment', views.comment, name='comment'),

@@ -113,6 +113,9 @@ def review(request):
     else:
         return render(request, 'review/review.html', {'review':review})
 
+def about(request):
+    return render(request, 'review/about.html')
+
 
 def detailReview(request, id):
     review = rm.Review.objects.get(id=id)
