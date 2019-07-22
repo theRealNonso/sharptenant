@@ -1,5 +1,5 @@
 confusable-homoglyphs==3.2.0
-Django==2.2
+Django==2.2.3
 django-appconf==1.0.3
 django-contrib-comments==1.9.1
 django-disqus==0.5
