@@ -25,7 +25,7 @@ SECRET_KEY = '!529fe*6f2*9iu(0w+sf@riq7soje-4468$j!&3h)n%n-3gcp7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'sharptenant.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'thesharptenant.com']
 
 
 # Application definition
@@ -108,9 +108,9 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# DISQUS SETTINGS
-# DISQUS_API_KEY = 'tB7w7HYWCeD1XxXu57yBgb602otDc9rx4mpTgy47zSKL0KtPJa9DfF2UWfv4rH1g'
-# DISQUS_WEBSITE_SHORTNAME = 'sharptenant'
+DISQUS SETTINGS
+DISQUS_API_KEY = 'tB7w7HYWCeD1XxXu57yBgb602otDc9rx4mpTgy47zSKL0KtPJa9DfF2UWfv4rH1g'
+DISQUS_WEBSITE_SHORTNAME = 'sharptenant'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
