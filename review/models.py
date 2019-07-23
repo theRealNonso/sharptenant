@@ -9,7 +9,7 @@ class Review(models.Model):
     house_number = models.IntegerField()
     location = models.CharField(max_length=100, null=True)
     review = models.TextField() 
-    image = models.FileField(upload_to='images/', null=True)
+    image = models.FileField(upload_to='images/', default='images/dummy.jpg')
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -25,4 +25,3 @@ class Comment(models.Model):
 
     def __str__(self):
         return (self.user)
-

@@ -87,7 +87,7 @@
           
             
           
-            <form class="p-5 bg-white" method="post" action="write-review" enctype="multipart/form-data">
+            <form class="p-5 bg-white" method="post" action="write-review" enctype="multipart/form-data" >
               {% csrf_token %}
               <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
@@ -129,8 +129,10 @@
               </div>
 
               <div class= "row form-group">
-                  <div class="col-md-12 mb-3 mb-md-0">
-                  <input type="file" name="image">
+                  <div class="col-md-12 mb-3 mb-md-0"> 
+                    {{ form.image}}
+                    <br>
+                  <!-- <input type="file" name="image" accept="image/*" > -->
                   
                   </div>
               </div>
@@ -153,7 +155,7 @@
     
 
     
-   <div class="py-5 bg-primary">
+   <!-- <div class="py-5 bg-primary">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -169,7 +171,7 @@
           </div>
         </form>
       </div>
-    </div>
+    </div> -->
 
 
    <footer class="site-footer">
@@ -181,7 +183,7 @@
           <div class="col-md-12">
             <p>
 
-            Copyright &copy; <script data-cfasync="false" src=""></script><script>document.write(new Date().getFullYear());</script> All Rights Reserved | A social project made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="#" target="_blank" >'Nonso</a>
+            Copyright &copy; <script data-cfasync="false" src=""></script><script>document.write(new Date().getFullYear());</script> All Rights Reserved | A social project made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://www.linkedin.com/in/okoroafornonso/" target="_blank" >'Nonso</a>
             </p>
           </div>
           

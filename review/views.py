@@ -82,10 +82,11 @@ def searchReview(request):
             return render(request, 'review/review.html', context)
         else:
             form = rf.SearchForm()
-        return render(request, 'index.html', {'form':form})
+        return render(request, 'error.html')
     else:
         form = rf.SearchForm()
         return render(request, 'index.html', {'form':form})
+
 
 @login_required(login_url='login')
 def writeReview(request):
@@ -98,7 +99,6 @@ def writeReview(request):
             review.save()
             return HttpResponseRedirect('review')
         else:
-            print(form.errors)
             form = rf.ReviewForm()
         return render(request, 'review/new-post.html', {'form':form})
     else:
@@ -121,6 +121,7 @@ def detailReview(request, id):
     review = rm.Review.objects.get(id=id)
     context = {'review': review}
     return render(request, 'review/reviewSingle.html',context)
+    
 
 
 

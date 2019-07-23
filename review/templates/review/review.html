@@ -61,9 +61,9 @@
 
               <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li class="active"><a href="/">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <!-- <li><a href="about.html">About</a></li> -->
                 <li><a href="login">Login</a></li>
-                <li><a href="register">Register</a></li>
+                <li><a href="/register">Register</a></li>
                 <li><a href="write-review"><span class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">+</span> Post a Review</span></a></li>
               </ul>
             </nav>
@@ -97,7 +97,11 @@
         
           <div class="col-md-6 mb-5 mb-lg-4 col-lg-3" data-aos="fade">
             <div class="position-relative unit-8">
+            {% if review.image %}
             <a href="/review-detail/{{review.id}}" class="mb-3 d-block img-a"><img src="{{ review.image.url }}" alt="Image" class="img-fluid rounded"></a>
+            {% else %}
+            <a href="/review-detail/{{review.id}}" class="mb-3 d-block img-a"><img src="url('/media/images/dummy.jpg')" alt="Image" class="img-fluid rounded"></a>
+            {% endif %}
             <span class="d-block text-gray-500 text-normal small mb-3">By <a href="#">{{review.user}}</a> <span class="mx-2">&bullet;</span> {{ review.created}}</span>
             <h2 class="h5 font-weihgt-normal line-height-sm mb-3 ellipsis"><a href="#" class="text-black"></a></h2><p class="ellipses">{{ review.review}}.</p>
             </div>
@@ -141,8 +145,8 @@
 
 
     
-    <div class="py-5 bg-primary">
-      <div class="container">
+    <!-- <div class="py-5 bg-primary"> -->
+      <!-- <div class="container">
         <div class="row">
           <div class="col-md-12">
             <h2 class="text-white h4 font-weihgt-normal mb-4">Get updates on great houses and those to avoid</h2>
@@ -157,7 +161,8 @@
           </div>
         </form>
       </div>
-    </div>
+    </div> -->
+
     <footer class="site-footer">
       <div class="container">
         
@@ -167,7 +172,7 @@
           <div class="col-md-12">
             <p>
 
-            Copyright &copy; <script data-cfasync="false" src=""></script><script>document.write(new Date().getFullYear());</script> All Rights Reserved | A social project made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="#" target="_blank" >'Nonso</a>
+            Copyright &copy; <script data-cfasync="false" src=""></script><script>document.write(new Date().getFullYear());</script> All Rights Reserved | A social project made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://www.linkedin.com/in/okoroafornonso/" target="_blank" >'Nonso</a>
             </p>
           </div>
           

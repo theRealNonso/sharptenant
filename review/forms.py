@@ -4,12 +4,14 @@ from review.models import Review
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
+
 class ReviewForm(forms.ModelForm):
     title = forms.CharField(max_length=200)
     house_number = forms.IntegerField(label='House Number')
     street_name = forms.CharField(label='Address', max_length=100)
     location = forms.CharField(label='Location', max_length=50)
     review = forms.CharField(widget=forms.Textarea)
+    image = forms.ImageField(required=False)
 
     class Meta:
         model = Review
@@ -25,6 +27,8 @@ class ReviewForm(forms.ModelForm):
     location.widget.attrs.update({'class': 'form-control', 
                                'placeholder': 'Lagos'})
     review.widget.attrs.update({'class': 'form-control'})
+    image.widget.attrs.update({'class': 'form-control', 'accept':'image/*'})
+
 
 class CommentForm(forms.Form):
     comment = forms.CharField(widget=forms.Textarea)
@@ -33,7 +37,7 @@ class CommentForm(forms.Form):
 class SearchForm(forms.Form):
     number = forms.IntegerField(label='House Number', required=False)
     address = forms.CharField(label='Address', max_length=100)
-    location = forms.CharField(label='Location', max_length=50)
+    location = forms.CharField(label='Location', max_length=50, required=False)
 
     number.widget.attrs.update({'class': 'form-control',
                                'placeholder': 'Number'})
