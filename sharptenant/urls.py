@@ -19,6 +19,10 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 
+admin.site.site_header = "Sharptenant Admin"
+admin.site.site_title = "Sharptenant Admin Portal"
+admin.site.index_title = "Welcome to Sharptenant Admin Portal"
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     path('', include('review.urls')),
