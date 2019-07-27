@@ -25,7 +25,7 @@ SECRET_KEY = '!529fe*6f2*9iu(0w+sf@riq7soje-4468$j!&3h)n%n-3gcp7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'thesharptenant.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'thesharptenant.com', 'www.thesharptenant.com']
 
 
 # Application definition
@@ -82,8 +82,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'sharptenant',
         'USER': 'nonso',
-        'PASSWORD': 'pass',
-        'HOST': '127.0.0.1',
+        'PASSWORD': '&1pass2103',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
@@ -110,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 #DISQUS SETTINGS
 DISQUS_API_KEY = 'tB7w7HYWCeD1XxXu57yBgb602otDc9rx4mpTgy47zSKL0KtPJa9DfF2UWfv4rH1g'
-DISQUS_WEBSITE_SHORTNAME = 'sharptenant'
+DISQUS_WEBSITE_SHORTNAME = 'thesharptenant-com'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
@@ -134,5 +134,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+#STATIC_ROOT ='/var/www/django/review/static/'
 
-# STATIC_ROOT ='/var/www/django/review/static/'
